@@ -17,5 +17,11 @@ namespace BookManager
             InitializeComponent();
         }
         private void test() { }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+        private string db_databa;
     }
 }
