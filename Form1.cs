@@ -16,5 +16,6 @@ namespace BookManager
         {
             InitializeComponent();
         }
+        private void test() { }
     }
 }
