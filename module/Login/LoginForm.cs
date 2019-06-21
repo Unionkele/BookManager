@@ -8,20 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace BookManager
+namespace BookManager.module.Login
 {
-    public partial class Form1 : Form
+    public partial class LoginForm : Form
     {
-        public Form1()
+        public LoginForm()
         {
             InitializeComponent();
         }
-        private void test() { }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-        private string db_databa;
     }
 }
