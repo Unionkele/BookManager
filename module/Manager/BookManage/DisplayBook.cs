@@ -8,20 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace BookManager
+namespace BookManager.module.Manager.BookManager
 {
-    public partial class MainForm : Form
+    public partial class DisplayBook : Form
     {
-        public MainForm()
+        public DisplayBook()
         {
             InitializeComponent();
         }
-        private void test() { }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void 新增ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("test");
+            
         }
-       
     }
 }

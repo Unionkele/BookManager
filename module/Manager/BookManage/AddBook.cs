@@ -8,13 +8,20 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace BookManager.module.admin
+using NetDB.Core.Support;
+using BookManager.model;
+
+namespace BookManage.module.Manager.BookManage
 {
-    public partial class UserManager : Form
+    public partial class AddBook : Form
     {
-        public UserManager()
+        public AddBook()
         {
             InitializeComponent();
+        }
+        private void AddBookInfo()
+        {
+            
         }
     }
 }

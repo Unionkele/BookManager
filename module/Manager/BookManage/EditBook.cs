@@ -8,20 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace BookManager
+namespace BookManager.module.Manager.BookManager
 {
-    public partial class MainForm : Form
+    public partial class EditBook : Form
     {
-        public MainForm()
+        public EditBook()
         {
             InitializeComponent();
         }
-        private void test() { }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            MessageBox.Show("test");
-        }
-       
     }
 }

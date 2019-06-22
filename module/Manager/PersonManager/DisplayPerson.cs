@@ -8,20 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace BookManager
+namespace BookManager.module.Manager.PersonManager
 {
-    public partial class MainForm : Form
+    public partial class DisplayPerson : Form
     {
-        public MainForm()
+        public DisplayPerson()
         {
             InitializeComponent();
         }
-        private void test() { }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            MessageBox.Show("test");
-        }
-       
     }
 }

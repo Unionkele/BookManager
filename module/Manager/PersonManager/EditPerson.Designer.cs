@@ -1,6 +1,6 @@
-﻿namespace BookManager.module.admin
+﻿namespace BookManager.module.Manager.PersonManager
 {
-    partial class UserManager
+    partial class EditPerson
     {
         /// <summary>
         /// Required designer variable.
@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Text = "UserManager";
+            this.Text = "EditPerson";
         }
 
         #endregion
