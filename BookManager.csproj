@@ -66,11 +66,11 @@
     <Compile Include="module\Manager\BookManage\AddBook.Designer.cs">
       <DependentUpon>AddBook.cs</DependentUpon>
     </Compile>
-    <Compile Include="module\Manager\BookManage\BookTypecs.cs">
+    <Compile Include="module\Manager\BookManage\AddBookType.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="module\Manager\BookManage\BookTypecs.Designer.cs">
-      <DependentUpon>BookTypecs.cs</DependentUpon>
+    <Compile Include="module\Manager\BookManage\AddBookType.Designer.cs">
+      <DependentUpon>AddBookType.cs</DependentUpon>
     </Compile>
     <Compile Include="module\Manager\BookManage\DisplayBook.cs">
       <SubType>Form</SubType>
@@ -84,16 +84,16 @@
     <Compile Include="module\Manager\BookManage\EditBook.Designer.cs">
       <DependentUpon>EditBook.cs</DependentUpon>
     </Compile>
-    <Compile Include="module\Manager\PersonManager\DisplayPerson.cs">
+    <Compile Include="module\Manager\PersonManage\DisplayPerson.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="module\Manager\PersonManager\DisplayPerson.Designer.cs">
+    <Compile Include="module\Manager\PersonManage\DisplayPerson.Designer.cs">
       <DependentUpon>DisplayPerson.cs</DependentUpon>
     </Compile>
-    <Compile Include="module\Manager\PersonManager\EditPerson.cs">
+    <Compile Include="module\Manager\PersonManage\EditPerson.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="module\Manager\PersonManager\EditPerson.Designer.cs">
+    <Compile Include="module\Manager\PersonManage\EditPerson.Designer.cs">
       <DependentUpon>EditPerson.cs</DependentUpon>
     </Compile>
     <Compile Include="module\Manager\RoalManager.cs">
@@ -127,6 +127,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="module\Manager\BookManage\AddBook.resx">
       <DependentUpon>AddBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="module\Manager\BookManage\AddBookType.resx">
+      <DependentUpon>AddBookType.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="module\Manager\BookManage\DisplayBook.resx">
       <DependentUpon>DisplayBook.cs</DependentUpon>

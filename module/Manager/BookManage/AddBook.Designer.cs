@@ -1,4 +1,4 @@
-﻿namespace BookManager.module.Manager.BookManager
+﻿namespace BookManage.module.Manager.BookManage
 {
     partial class AddBook
     {
@@ -209,6 +209,7 @@
             this.Controls.Add(this.tbBookName);
             this.Controls.Add(this.label1);
             this.Name = "AddBook";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddBook";
             this.ResumeLayout(false);
             this.PerformLayout();
