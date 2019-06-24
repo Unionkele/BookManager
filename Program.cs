@@ -6,6 +6,7 @@ using System.Windows.Forms;
 
 using NetDB.Core;
 using BookManager.model;
+using BookManager.module.Login;
 
 namespace BookManager
 {
@@ -20,7 +21,7 @@ namespace BookManager
             createTb();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainForm());
+            Application.Run(new Zhuce());
 
         }
         static void createTb()
