@@ -16,9 +16,12 @@ namespace BookManager.module.Manager.BookManage
 {
     public partial class AddBookInfo : Form
     {
-        public AddBookInfo()
+        private DisplayBook displayBook;
+
+        public AddBookInfo(DisplayBook displayBook)
         {
             InitializeComponent();
+            this.displayBook = displayBook;
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -53,6 +56,7 @@ namespace BookManager.module.Manager.BookManage
                 }
                 else
                 {
+                    displayBook.showBookInfo();
                     MessageBox.Show("添加成功", "提示信息");                    
                 }
             }

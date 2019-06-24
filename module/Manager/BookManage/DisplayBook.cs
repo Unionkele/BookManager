@@ -21,7 +21,7 @@ namespace BookManager.module.Manager.BookManage
             InitializeComponent();
         }
         //书籍信息列表显示
-        private void showBookInfo()
+        public void showBookInfo()
         {
             PageList<BookInfo> bookList = ORMSupport.PageSelect<BookInfo>()
                 .Select();
@@ -29,7 +29,7 @@ namespace BookManager.module.Manager.BookManage
         }
         private void 新增ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            new AddBookInfo().Show();
+            new AddBookInfo(this).Show();
         }
 
         private void 编辑ToolStripMenuItem_Click(object sender, EventArgs e)
