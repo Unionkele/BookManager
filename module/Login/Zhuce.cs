@@ -7,8 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+<<<<<<< HEAD
+=======
 using NetDB.Core;
 using BookManager.model;
+>>>>>>> 0305b9003623cb6f0a31e02bab5de157078e505c
 
 namespace BookManager.module.Login
 {
@@ -16,8 +19,7 @@ namespace BookManager.module.Login
     {
         public Zhuce()
         {
-            InitializeComponent();
-            
+            InitializeComponent();          
         }
 
         private void button1_Click(object sender, EventArgs e)
