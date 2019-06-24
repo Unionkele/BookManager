@@ -31,6 +31,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>BookManager.Program</StartupObject>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="NetDBLibrary, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -66,11 +69,11 @@
     <Compile Include="module\Login\Zhuce.Designer.cs">
       <DependentUpon>Zhuce.cs</DependentUpon>
     </Compile>
-    <Compile Include="module\Manager\BookManage\AddBook.cs">
+    <Compile Include="module\Manager\BookManage\AddBookInfo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="module\Manager\BookManage\AddBook.Designer.cs">
-      <DependentUpon>AddBook.cs</DependentUpon>
+    <Compile Include="module\Manager\BookManage\AddBookInfo.Designer.cs">
+      <DependentUpon>AddBookInfo.cs</DependentUpon>
     </Compile>
     <Compile Include="module\Manager\BookManage\AddBookType.cs">
       <SubType>Form</SubType>
@@ -84,11 +87,11 @@
     <Compile Include="module\Manager\BookManage\DisplayBook.Designer.cs">
       <DependentUpon>DisplayBook.cs</DependentUpon>
     </Compile>
-    <Compile Include="module\Manager\BookManage\EditBook.cs">
+    <Compile Include="module\Manager\BookManage\EditBookInfo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="module\Manager\BookManage\EditBook.Designer.cs">
-      <DependentUpon>EditBook.cs</DependentUpon>
+    <Compile Include="module\Manager\BookManage\EditBookInfo.Designer.cs">
+      <DependentUpon>EditBookInfo.cs</DependentUpon>
     </Compile>
     <Compile Include="module\Manager\PersonManage\DisplayPerson.cs">
       <SubType>Form</SubType>
@@ -140,8 +143,8 @@
     <EmbeddedResource Include="module\Login\Zhuce.resx">
       <DependentUpon>Zhuce.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="module\Manager\BookManage\AddBook.resx">
-      <DependentUpon>AddBook.cs</DependentUpon>
+    <EmbeddedResource Include="module\Manager\BookManage\AddBookInfo.resx">
+      <DependentUpon>AddBookInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="module\Manager\BookManage\AddBookType.resx">
       <DependentUpon>AddBookType.cs</DependentUpon>
@@ -149,8 +152,8 @@
     <EmbeddedResource Include="module\Manager\BookManage\DisplayBook.resx">
       <DependentUpon>DisplayBook.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="module\Manager\BookManage\EditBook.resx">
-      <DependentUpon>EditBook.cs</DependentUpon>
+    <EmbeddedResource Include="module\Manager\BookManage\EditBookInfo.resx">
+      <DependentUpon>EditBookInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

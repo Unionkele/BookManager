@@ -1,4 +1,4 @@
-﻿namespace BookManager.module.Manager.BookManager
+﻿namespace BookManager.module.Manager.BookManage
 {
     partial class DisplayBook
     {
@@ -29,6 +29,11 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.操作ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.新增ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.编辑ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.删除ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.BookName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BookWriter = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BookPublish = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -37,11 +42,6 @@
             this.BookNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BookType = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BookRemark = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.操作ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.新增ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.编辑ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.删除ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -60,51 +60,14 @@
             this.BookNum,
             this.BookType,
             this.BookRemark});
-            this.dataGridView1.Location = new System.Drawing.Point(12, 47);
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 25);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowTemplate.Height = 23;
-            this.dataGridView1.Size = new System.Drawing.Size(785, 380);
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(809, 428);
             this.dataGridView1.TabIndex = 1;
-            // 
-            // BookName
-            // 
-            this.BookName.HeaderText = "书籍名称";
-            this.BookName.Name = "BookName";
-            // 
-            // BookWriter
-            // 
-            this.BookWriter.HeaderText = "作者";
-            this.BookWriter.Name = "BookWriter";
-            // 
-            // BookPublish
-            // 
-            this.BookPublish.HeaderText = "出版社";
-            this.BookPublish.Name = "BookPublish";
-            // 
-            // BookDate
-            // 
-            this.BookDate.HeaderText = "出版时间";
-            this.BookDate.Name = "BookDate";
-            // 
-            // BookPrice
-            // 
-            this.BookPrice.HeaderText = "价格";
-            this.BookPrice.Name = "BookPrice";
-            // 
-            // BookNum
-            // 
-            this.BookNum.HeaderText = "数量";
-            this.BookNum.Name = "BookNum";
-            // 
-            // BookType
-            // 
-            this.BookType.HeaderText = "类型";
-            this.BookType.Name = "BookType";
-            // 
-            // BookRemark
-            // 
-            this.BookRemark.HeaderText = "备注";
-            this.BookRemark.Name = "BookRemark";
             // 
             // menuStrip1
             // 
@@ -129,23 +92,79 @@
             // 新增ToolStripMenuItem
             // 
             this.新增ToolStripMenuItem.Name = "新增ToolStripMenuItem";
-            this.新增ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.新增ToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
             this.新增ToolStripMenuItem.Text = "新增";
             this.新增ToolStripMenuItem.Click += new System.EventHandler(this.新增ToolStripMenuItem_Click);
             // 
             // 编辑ToolStripMenuItem
             // 
             this.编辑ToolStripMenuItem.Name = "编辑ToolStripMenuItem";
-            this.编辑ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.编辑ToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
             this.编辑ToolStripMenuItem.Text = "编辑";
             this.编辑ToolStripMenuItem.Click += new System.EventHandler(this.编辑ToolStripMenuItem_Click);
             // 
             // 删除ToolStripMenuItem
             // 
             this.删除ToolStripMenuItem.Name = "删除ToolStripMenuItem";
-            this.删除ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.删除ToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
             this.删除ToolStripMenuItem.Text = "删除";
             this.删除ToolStripMenuItem.Click += new System.EventHandler(this.删除ToolStripMenuItem_Click);
+            // 
+            // BookName
+            // 
+            this.BookName.DataPropertyName = "BookName";
+            this.BookName.HeaderText = "书籍名称";
+            this.BookName.Name = "BookName";
+            this.BookName.ReadOnly = true;
+            // 
+            // BookWriter
+            // 
+            this.BookWriter.DataPropertyName = "BookWriter";
+            this.BookWriter.HeaderText = "作者";
+            this.BookWriter.Name = "BookWriter";
+            this.BookWriter.ReadOnly = true;
+            // 
+            // BookPublish
+            // 
+            this.BookPublish.DataPropertyName = "BookPublish";
+            this.BookPublish.HeaderText = "出版社";
+            this.BookPublish.Name = "BookPublish";
+            this.BookPublish.ReadOnly = true;
+            // 
+            // BookDate
+            // 
+            this.BookDate.DataPropertyName = "BookDate";
+            this.BookDate.HeaderText = "出版时间";
+            this.BookDate.Name = "BookDate";
+            this.BookDate.ReadOnly = true;
+            // 
+            // BookPrice
+            // 
+            this.BookPrice.DataPropertyName = "BookPrice";
+            this.BookPrice.HeaderText = "价格";
+            this.BookPrice.Name = "BookPrice";
+            this.BookPrice.ReadOnly = true;
+            // 
+            // BookNum
+            // 
+            this.BookNum.DataPropertyName = "BookNum";
+            this.BookNum.HeaderText = "数量";
+            this.BookNum.Name = "BookNum";
+            this.BookNum.ReadOnly = true;
+            // 
+            // BookType
+            // 
+            this.BookType.DataPropertyName = "BookType";
+            this.BookType.HeaderText = "类型";
+            this.BookType.Name = "BookType";
+            this.BookType.ReadOnly = true;
+            // 
+            // BookRemark
+            // 
+            this.BookRemark.DataPropertyName = "BookRemark";
+            this.BookRemark.HeaderText = "备注";
+            this.BookRemark.Name = "BookRemark";
+            this.BookRemark.ReadOnly = true;
             // 
             // DisplayBook
             // 
@@ -156,6 +175,7 @@
             this.Controls.Add(this.menuStrip1);
             this.Name = "DisplayBook";
             this.Text = "DisplayBook";
+            this.Load += new System.EventHandler(this.DisplayBook_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -167,6 +187,11 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem 操作ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 新增ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 编辑ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 删除ToolStripMenuItem;
         private System.Windows.Forms.DataGridViewTextBoxColumn BookName;
         private System.Windows.Forms.DataGridViewTextBoxColumn BookWriter;
         private System.Windows.Forms.DataGridViewTextBoxColumn BookPublish;
@@ -175,10 +200,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn BookNum;
         private System.Windows.Forms.DataGridViewTextBoxColumn BookType;
         private System.Windows.Forms.DataGridViewTextBoxColumn BookRemark;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem 操作ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 新增ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 编辑ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 删除ToolStripMenuItem;
     }
 }
