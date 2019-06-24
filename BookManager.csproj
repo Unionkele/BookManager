@@ -131,21 +131,15 @@
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-<<<<<<< HEAD
     <EmbeddedResource Include="module\book\BookInfo.resx">
       <DependentUpon>BookInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="module\Login\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
-=======
-    <EmbeddedResource Include="module\Login\LoginForm.resx">
-      <DependentUpon>LoginForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="module\Login\Zhuce.resx">
       <DependentUpon>Zhuce.cs</DependentUpon>
     </EmbeddedResource>
->>>>>>> d937b136945c40f68883d74f6184133bb215af20
     <EmbeddedResource Include="module\Manager\BookManage\AddBook.resx">
       <DependentUpon>AddBook.cs</DependentUpon>
     </EmbeddedResource>
