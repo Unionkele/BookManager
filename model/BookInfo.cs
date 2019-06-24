@@ -51,7 +51,7 @@ namespace BookManager.model
         //书籍价格
         private float _BookPrice;
 
-        [Colmun(Type = "float", IsNull = false)]
+        [Colmun(Type = "float")]
         public float BookPrice
         {
             get { return _BookPrice; }

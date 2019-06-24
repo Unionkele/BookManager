@@ -10,7 +10,7 @@ using NetDB.Core.SqlAttribute;
 
 namespace BookManager.model
 {
-    class BookType:ORMSupport
+    class BookType : ORMSupport
     {
         //书籍类别
         private string _BType;
