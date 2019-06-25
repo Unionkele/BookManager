@@ -170,6 +170,9 @@
     <EmbeddedResource Include="module\Manager\PersonManage\DisplayPerson.resx">
       <DependentUpon>DisplayPerson.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="module\user\UserInfo.resx">
+      <DependentUpon>UserInfo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
