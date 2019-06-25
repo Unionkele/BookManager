@@ -16,5 +16,19 @@ namespace BookManager.module.user
         {
             InitializeComponent();
         }
+        string strname, strphone, strnum;
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (textBox_name.Text != "") 
+            {
+                
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            textBox_name.Text = textBox_num.Text = textBox_phone.Text = textBox__money.Text = "";
+            
+        }
     }
 }
