@@ -14,13 +14,19 @@ using BookManager.model;
 using BookManager.module.Manager.PersonManage;
 
 
+
 namespace BookManager.module.Manager.PersonManager
 {
     public partial class DisplayPerson : Form
     {
-        public DisplayPerson()
+        public DisplayPerson(string ID)
         {
             InitializeComponent();
+        }
+
+        public DisplayPerson()
+        {
+            // TODO: Complete member initialization
         }
 
         private void DisplayPerson_Load(object sender, EventArgs e)
@@ -36,18 +42,39 @@ namespace BookManager.module.Manager.PersonManager
 
         private void button1_Click(object sender, EventArgs e)
         {
-            EditPerson win = new EditPerson(); win.Show();
+            //deteperson win = new deteperson(); win.Show();
+            int count = dataGridView1.SelectedRows.Count;
+            if (count == 0)
+            {
+                MessageBox.Show("未选中行！");
+                return;
+            }
+            String ID = dataGridView1.SelectedRows[0].Cells["ID"].Value.ToString();
+            //new  Person (ID).Show();
+            
+           
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            detepenson win = new detepenson(); win.Show();
+            //deteperson win = new deteperson(); win.Show();
+            string ID = dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells["ID"].Value.ToString();
+             Person info = new Person();
+            info.ID = ID;
+            info.Delete();
+            PageList<Person> page = ORMSupport.PageSelect<Person>()
+                .Select();
+            dataGridView1.DataSource = page.Rows;
 
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            selectpenson win = new selectpenson(); win.Show();
+            //selectperson win = new selectperson(); win.Show();
+            PageList<Person> page = ORMSupport.PageSelect<Person>()
+                .AddWhere("PersonName", textBox1.Text)
+                .Select();
+            dataGridView1.DataSource = page.Rows;
         }
 
         private void button4_Click(object sender, EventArgs e)

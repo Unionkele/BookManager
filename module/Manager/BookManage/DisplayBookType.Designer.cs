@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Btype = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BRemark = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.操作ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.新增ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.修改ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.删除ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.Btype = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BRemark = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -50,8 +50,20 @@
             this.dataGridView1.Location = new System.Drawing.Point(0, 25);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 23;
-            this.dataGridView1.Size = new System.Drawing.Size(243, 191);
+            this.dataGridView1.Size = new System.Drawing.Size(264, 170);
             this.dataGridView1.TabIndex = 0;
+            // 
+            // Btype
+            // 
+            this.Btype.DataPropertyName = "BType";
+            this.Btype.HeaderText = "类别名称";
+            this.Btype.Name = "Btype";
+            // 
+            // BRemark
+            // 
+            this.BRemark.DataPropertyName = "BRemark";
+            this.BRemark.HeaderText = "备注";
+            this.BRemark.Name = "BRemark";
             // 
             // menuStrip1
             // 
@@ -59,7 +71,7 @@
             this.操作ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(243, 25);
+            this.menuStrip1.Size = new System.Drawing.Size(264, 25);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -76,41 +88,29 @@
             // 新增ToolStripMenuItem
             // 
             this.新增ToolStripMenuItem.Name = "新增ToolStripMenuItem";
-            this.新增ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.新增ToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
             this.新增ToolStripMenuItem.Text = "新增";
             this.新增ToolStripMenuItem.Click += new System.EventHandler(this.新增ToolStripMenuItem_Click);
             // 
             // 修改ToolStripMenuItem
             // 
             this.修改ToolStripMenuItem.Name = "修改ToolStripMenuItem";
-            this.修改ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.修改ToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
             this.修改ToolStripMenuItem.Text = "修改";
             this.修改ToolStripMenuItem.Click += new System.EventHandler(this.修改ToolStripMenuItem_Click);
             // 
             // 删除ToolStripMenuItem
             // 
             this.删除ToolStripMenuItem.Name = "删除ToolStripMenuItem";
-            this.删除ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.删除ToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
             this.删除ToolStripMenuItem.Text = "删除";
             this.删除ToolStripMenuItem.Click += new System.EventHandler(this.删除ToolStripMenuItem_Click);
-            // 
-            // Btype
-            // 
-            this.Btype.DataPropertyName = "BType";
-            this.Btype.HeaderText = "类别名称";
-            this.Btype.Name = "Btype";
-            // 
-            // BRemark
-            // 
-            this.BRemark.DataPropertyName = "BRemark";
-            this.BRemark.HeaderText = "备注";
-            this.BRemark.Name = "BRemark";
             // 
             // DisplayBookType
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(243, 216);
+            this.ClientSize = new System.Drawing.Size(264, 195);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;

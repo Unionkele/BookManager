@@ -112,5 +112,10 @@ namespace BookManager.module.Manager.BookManage
         {
             updataInfo();
         }
+
+        private void editBookName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

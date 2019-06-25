@@ -77,5 +77,10 @@ namespace BookManager.model
             set { _PersonRemark = value; }
         }
 
+
+         internal void Show()
+         {
+             throw new NotImplementedException();
+         }
     }
 }

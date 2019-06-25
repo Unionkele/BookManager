@@ -8,7 +8,8 @@ using NetDB.Core;
 using BookManager.model;
 using BookManager.module.Login;
 using BookManager.module.Manager.BookManage;
-
+using BookManager.module.Manager.PersonManager;
+using BookManager.module.Manager.PersonManage;
 namespace BookManager
 {
     static class Program
@@ -22,7 +23,7 @@ namespace BookManager
             createTb();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new AddBookInfo());
+            Application.Run(new DisplayPerson());
 
         }
         static void createTb()
