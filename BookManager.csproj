@@ -105,14 +105,11 @@
     <Compile Include="module\Manager\BookManage\EditBookType.Designer.cs">
       <DependentUpon>EditBookType.cs</DependentUpon>
     </Compile>
-    <Compile Include="module\Manager\PersonManage\addpenson.cs">
+    <Compile Include="module\Manager\PersonManage\detepenson.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="module\Manager\PersonManage\addpenson.Designer.cs">
-      <DependentUpon>addpenson.cs</DependentUpon>
-    </Compile>
-    <Compile Include="module\Manager\PersonManage\addpenson_2.cs">
-      <SubType>Form</SubType>
+    <Compile Include="module\Manager\PersonManage\detepenson.designer.cs">
+      <DependentUpon>detepenson.cs</DependentUpon>
     </Compile>
     <Compile Include="module\Manager\PersonManage\DisplayPerson.cs">
       <SubType>Form</SubType>
@@ -132,11 +129,11 @@
     <Compile Include="module\Login\LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="module\Manager\PersonManage\Form1.cs">
+    <Compile Include="module\Manager\PersonManage\selectpenson.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="module\Manager\PersonManage\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="module\Manager\PersonManage\selectpenson.designer.cs">
+      <DependentUpon>selectpenson.cs</DependentUpon>
     </Compile>
     <Compile Include="module\user\UserInfo.cs">
       <SubType>Form</SubType>
@@ -173,11 +170,14 @@
     <EmbeddedResource Include="module\Manager\BookManage\EditBookType.resx">
       <DependentUpon>EditBookType.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="module\Manager\PersonManage\addpenson.resx">
-      <DependentUpon>addpenson.cs</DependentUpon>
+    <EmbeddedResource Include="module\Manager\PersonManage\detepenson.resx">
+      <DependentUpon>detepenson.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="module\Manager\PersonManage\DisplayPerson.resx">
       <DependentUpon>DisplayPerson.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="module\Manager\PersonManage\selectpenson.resx">
+      <DependentUpon>selectpenson.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="module\user\UserInfo.resx">
       <DependentUpon>UserInfo.cs</DependentUpon>

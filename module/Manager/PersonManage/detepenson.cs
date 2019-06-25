@@ -8,15 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-using NetDB.Core;
-using NetDB.Core.Support;
-using BookManager.model;
-
 namespace BookManager.module.Manager.PersonManage
 {
-    public partial class addpenson : Form
+    public partial class detepenson : Form
     {
-        public addpenson()
+        public detepenson()
         {
             InitializeComponent();
         }

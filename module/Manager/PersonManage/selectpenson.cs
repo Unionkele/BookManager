@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace BookManager.module.Manager.PersonManage
 {
-    public partial class Form1 : Form
+    public partial class selectpenson : Form
     {
-        public Form1()
+        public selectpenson()
         {
             InitializeComponent();
         }

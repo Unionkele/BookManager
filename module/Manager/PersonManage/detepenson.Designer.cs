@@ -1,6 +1,6 @@
 ﻿namespace BookManager.module.Manager.PersonManage
 {
-    partial class Form1
+    partial class detepenson
     {
         /// <summary>
         /// Required designer variable.
@@ -28,9 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // detepenson
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Text = "Form1";
+            this.ClientSize = new System.Drawing.Size(665, 321);
+            this.Name = "detepenson";
+            this.Text = "detepenson";
+            this.ResumeLayout(false);
+
         }
 
         #endregion

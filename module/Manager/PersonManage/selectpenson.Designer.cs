@@ -1,6 +1,6 @@
 ﻿namespace BookManager.module.Manager.PersonManage
 {
-    partial class addpenson
+    partial class selectpenson
     {
         /// <summary>
         /// Required designer variable.
@@ -30,13 +30,13 @@
         {
             this.SuspendLayout();
             // 
-            // addpenson
+            // selectpenson
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(434, 320);
-            this.Name = "addpenson";
-            this.Text = "addpenson";
+            this.ClientSize = new System.Drawing.Size(609, 325);
+            this.Name = "selectpenson";
+            this.Text = "selectpenson";
             this.ResumeLayout(false);
 
         }

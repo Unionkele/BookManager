@@ -36,18 +36,18 @@ namespace BookManager.module.Manager.PersonManager
 
         private void button1_Click(object sender, EventArgs e)
         {
-           
+            EditPerson win = new EditPerson(); win.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            detepenson win = new detepenson(); win.Show();
 
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            selectpenson win = new selectpenson(); win.Show();
         }
 
         private void button4_Click(object sender, EventArgs e)
