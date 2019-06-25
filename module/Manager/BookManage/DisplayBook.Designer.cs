@@ -29,14 +29,6 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.操作ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.新增ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.编辑ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.删除ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.书籍类别管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tbsearch = new System.Windows.Forms.TextBox();
-            this.searchBtn = new System.Windows.Forms.Button();
             this.BookName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BookWriter = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BookPublish = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -46,6 +38,14 @@
             this.BookType = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BookRemark = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.操作ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.新增ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.编辑ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.删除ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.书籍类别管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tbsearch = new System.Windows.Forms.TextBox();
+            this.searchBtn = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.cbSearchType = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -73,6 +73,70 @@
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(809, 394);
             this.dataGridView1.TabIndex = 1;
+            // 
+            // BookName
+            // 
+            this.BookName.DataPropertyName = "BookName";
+            this.BookName.HeaderText = "书籍名称";
+            this.BookName.Name = "BookName";
+            this.BookName.ReadOnly = true;
+            // 
+            // BookWriter
+            // 
+            this.BookWriter.DataPropertyName = "BookWriter";
+            this.BookWriter.HeaderText = "作者";
+            this.BookWriter.Name = "BookWriter";
+            this.BookWriter.ReadOnly = true;
+            // 
+            // BookPublish
+            // 
+            this.BookPublish.DataPropertyName = "BookPublish";
+            this.BookPublish.HeaderText = "出版社";
+            this.BookPublish.Name = "BookPublish";
+            this.BookPublish.ReadOnly = true;
+            // 
+            // BookDate
+            // 
+            this.BookDate.DataPropertyName = "BookDate";
+            this.BookDate.HeaderText = "出版时间";
+            this.BookDate.Name = "BookDate";
+            this.BookDate.ReadOnly = true;
+            // 
+            // BookPrice
+            // 
+            this.BookPrice.DataPropertyName = "BookPrice";
+            this.BookPrice.HeaderText = "价格";
+            this.BookPrice.Name = "BookPrice";
+            this.BookPrice.ReadOnly = true;
+            // 
+            // BookNum
+            // 
+            this.BookNum.DataPropertyName = "BookNum";
+            this.BookNum.HeaderText = "数量";
+            this.BookNum.Name = "BookNum";
+            this.BookNum.ReadOnly = true;
+            // 
+            // BookType
+            // 
+            this.BookType.DataPropertyName = "BookType";
+            this.BookType.HeaderText = "类型";
+            this.BookType.Name = "BookType";
+            this.BookType.ReadOnly = true;
+            // 
+            // BookRemark
+            // 
+            this.BookRemark.DataPropertyName = "BookRemark";
+            this.BookRemark.HeaderText = "备注";
+            this.BookRemark.Name = "BookRemark";
+            this.BookRemark.ReadOnly = true;
+            // 
+            // ID
+            // 
+            this.ID.DataPropertyName = "ID";
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            this.ID.Visible = false;
             // 
             // menuStrip1
             // 
@@ -140,70 +204,6 @@
             this.searchBtn.UseVisualStyleBackColor = true;
             this.searchBtn.Click += new System.EventHandler(this.searchBtn_Click);
             // 
-            // BookName
-            // 
-            this.BookName.DataPropertyName = "BookName";
-            this.BookName.HeaderText = "书籍名称";
-            this.BookName.Name = "BookName";
-            this.BookName.ReadOnly = true;
-            // 
-            // BookWriter
-            // 
-            this.BookWriter.DataPropertyName = "BookWriter";
-            this.BookWriter.HeaderText = "作者";
-            this.BookWriter.Name = "BookWriter";
-            this.BookWriter.ReadOnly = true;
-            // 
-            // BookPublish
-            // 
-            this.BookPublish.DataPropertyName = "BookPublish";
-            this.BookPublish.HeaderText = "出版社";
-            this.BookPublish.Name = "BookPublish";
-            this.BookPublish.ReadOnly = true;
-            // 
-            // BookDate
-            // 
-            this.BookDate.DataPropertyName = "BookDate";
-            this.BookDate.HeaderText = "出版时间";
-            this.BookDate.Name = "BookDate";
-            this.BookDate.ReadOnly = true;
-            // 
-            // BookPrice
-            // 
-            this.BookPrice.DataPropertyName = "BookPrice";
-            this.BookPrice.HeaderText = "价格";
-            this.BookPrice.Name = "BookPrice";
-            this.BookPrice.ReadOnly = true;
-            // 
-            // BookNum
-            // 
-            this.BookNum.DataPropertyName = "BookNum";
-            this.BookNum.HeaderText = "数量";
-            this.BookNum.Name = "BookNum";
-            this.BookNum.ReadOnly = true;
-            // 
-            // BookType
-            // 
-            this.BookType.DataPropertyName = "BookType";
-            this.BookType.HeaderText = "类型";
-            this.BookType.Name = "BookType";
-            this.BookType.ReadOnly = true;
-            // 
-            // BookRemark
-            // 
-            this.BookRemark.DataPropertyName = "BookRemark";
-            this.BookRemark.HeaderText = "备注";
-            this.BookRemark.Name = "BookRemark";
-            this.BookRemark.ReadOnly = true;
-            // 
-            // ID
-            // 
-            this.ID.DataPropertyName = "ID";
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
-            this.ID.Visible = false;
-            // 
             // btnClose
             // 
             this.btnClose.Location = new System.Drawing.Point(712, 30);
@@ -234,6 +234,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.menuStrip1);
             this.Name = "DisplayBook";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "图书管理";
             this.Load += new System.EventHandler(this.DisplayBook_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

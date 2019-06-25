@@ -12,6 +12,7 @@ namespace BookManager.model
 {
     class Manager : ORMSupport
     {
+        //管理员名
         private string _ManagerName;
         [Colmun(Type = "varchar(50)", IsNull = false)]
         public string ManagerName
@@ -19,6 +20,7 @@ namespace BookManager.model
             get { return _ManagerName; }
             set { _ManagerName = value; }
         }
+        //登录密码
         private string _ManagerCode;
         [Colmun(Type = "varchar(50)", IsNull = false)]
         public string ManagerCode
@@ -26,6 +28,7 @@ namespace BookManager.model
             get { return _ManagerCode; }
             set { _ManagerCode = value; }
         }
+        //权限等级（超级管理员）
         private string _Manage;
         [Colmun(Type = "varchar(4)")]
         public string Manage
@@ -33,6 +36,7 @@ namespace BookManager.model
             get { return _Manage; }
             set { _Manage = value; }
         }
+        //权限等级（工作人员）
         private string _Work;
         [Colmun(Type = "varchar(4)")]
         public string Work
@@ -40,6 +44,7 @@ namespace BookManager.model
             get { return _Work; }
             set { _Work = value; }
         }
+        //权限等级（游客）
         private string _Query;
         [Colmun(Type = "varchar(4)")]
         public string Query

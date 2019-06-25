@@ -20,7 +20,7 @@ namespace BookManager.model
             get { return _BookID; }
             set { _BookID = value; }
         }
-        //还书人ID
+        //借书人ID
         private string _PersonID;
         [Colmun(Type = "varchar(32)", IsNull = false)]
         public string PersonID
@@ -28,7 +28,7 @@ namespace BookManager.model
             get { return _PersonID; }
             set { _PersonID = value; }
         }
-        //还书时间
+        //借书时间
         private DateTime _OutDate;
         [Colmun(Type = "datetime", IsNull = false)]
         public DateTime OutDate

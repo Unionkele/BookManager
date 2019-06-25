@@ -23,7 +23,6 @@ namespace BookManager
             createTb();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new DisplayPerson());
             Application.Run(new DisplayBook());
 
 
