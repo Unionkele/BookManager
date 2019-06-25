@@ -28,7 +28,9 @@ namespace BookManager.module.Manager.BookManage
         }
         private void 新增ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            new AddBookType(this).Show();
+            AddBookType AddTypeForm = new AddBookType();
+            AddTypeForm.Owner = this;
+            AddTypeForm.ShowDialog();
         }
 
         private void 修改ToolStripMenuItem_Click(object sender, EventArgs e)
@@ -40,7 +42,10 @@ namespace BookManager.module.Manager.BookManage
                 return;
             }
             String ID = dataGridView1.SelectedRows[0].Cells["ID"].Value.ToString();
-            new EditBookType(ID, this).Show();
+            EditBookType EditTypeForm = new EditBookType();
+            EditTypeForm.Owner = this;
+            EditTypeForm.EditID = ID;
+            EditTypeForm.ShowDialog();
         }
 
         private void 删除ToolStripMenuItem_Click(object sender, EventArgs e)
@@ -55,6 +60,11 @@ namespace BookManager.module.Manager.BookManage
             BookType delInfo = new BookType();
             delInfo.ID = ID;
             MessageBox.Show(delInfo.Delete() == 1 ? "删除成功！" : "删除失败！");
+            showTypeInfo();
+        }
+
+        private void DisplayBookType_Load(object sender, EventArgs e)
+        {
             showTypeInfo();
         }
     }

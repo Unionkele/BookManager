@@ -16,18 +16,10 @@ namespace BookManager.module.Manager.BookManage
 {
     public partial class AddBookInfo : Form
     {
-        private DisplayBook displayBook;
-
-        public AddBookInfo(DisplayBook displayBook)
-        {          
-            this.displayBook = displayBook;
-        }
-
         public AddBookInfo()
         {
-            InitializeComponent();         
+            InitializeComponent();
         }
-
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -36,7 +28,7 @@ namespace BookManager.module.Manager.BookManage
         private void btnAdd_Click(object sender, EventArgs e)
         {
             addInfo();
-          
+
         }
         //信息添加
         private void addInfo()
@@ -57,12 +49,13 @@ namespace BookManager.module.Manager.BookManage
                 int res = Binfo.Save();
                 if (res == 0)
                 {
-                    MessageBox.Show("添加失败", "提示信息");                   
+                    MessageBox.Show("添加失败", "提示信息");
                 }
                 else
                 {
-                    displayBook.showBookInfo();
-                    MessageBox.Show("添加成功", "提示信息");                    
+                    DisplayBook display = (DisplayBook)this.Owner;
+                    display.showBookInfo();
+                    MessageBox.Show("添加成功", "提示信息");
                 }
             }
             else
@@ -99,10 +92,25 @@ namespace BookManager.module.Manager.BookManage
             tbBookName.Clear();
             tbBookWriter.Clear();
             tbBookPublish.Clear();
-            tbBookPrice.Text="0";
+            tbBookPrice.Text = "0";
             tbBookNum.Clear();
             tbBookRemark.Clear();
         }
-        
+        private void TypeList()
+        {
+            PageList<BookType> typelist = ORMSupport.PageSelect<BookType>()
+                .Select();
+            foreach (BookType item in typelist.Rows)
+            {
+                cmBookType.Items.Add(item.BType);
+            }
+        }
+
+        private void AddBookInfo_Load(object sender, EventArgs e)
+        {
+            TypeList();
+            tbBookName.Focus();
+        }
+
     }
 }

@@ -15,14 +15,9 @@ namespace BookManager.module.Manager.BookManage
 {
     public partial class AddBookType : Form
     {
-        private DisplayBookType displayType;
         public AddBookType()
         {
             InitializeComponent();
-        }
-        public AddBookType(DisplayBookType displayType)
-        {
-            this.displayType = displayType;
         }
         private void AddType()
         {
@@ -48,8 +43,10 @@ namespace BookManager.module.Manager.BookManage
                     }
                     else
                     {
-                        displayType.showTypeInfo();
+                        DisplayBookType display = (DisplayBookType)this.Owner;
+                        display.showTypeInfo();
                         MessageBox.Show("添加成功", "提示信息");
+                        tbBookType.Clear();
                     }
                 }
             }
@@ -68,6 +65,11 @@ namespace BookManager.module.Manager.BookManage
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void AddBookType_Load(object sender, EventArgs e)
+        {
+            tbBookType.Focus();
         }
     }
 }

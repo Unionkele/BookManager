@@ -16,6 +16,7 @@ namespace BookManager.module.Manager.BookManage
 {
     public partial class DisplayBook : Form
     {
+        
         public DisplayBook()
         {
             InitializeComponent();
@@ -27,18 +28,31 @@ namespace BookManager.module.Manager.BookManage
                 .Select();
             dataGridView1.DataSource = bookList.Rows;
         }
-        //显示搜索结果(通过书籍名称或作者姓名查询)s
-        private void searchInfo(string key)
+        //显示搜索结果(通过书籍名称或作者姓名查询)(分类查询)
+        private void searchInfo(string key,string typekey)
         {
             PageList<BookInfo> searchInfo = new PageList<BookInfo>()
             .AddWhere("BookName", "like", "%" + key + "%")
-            .AddWhere("BookWriter", "like", "$" + key + "%")
+            .AddWhere("BookWriter", "like", "%" + key + "%")
+            .AddWhere("BookType",typekey)
             .Select();
             dataGridView1.DataSource = searchInfo.Rows;
         }
+        //加载下拉框
+        private void TypeList()
+        {
+            PageList<BookType> typelist = ORMSupport.PageSelect<BookType>()
+                .Select();
+            foreach (BookType item in typelist.Rows)
+            {
+                cbSearchType.Items.Add(item.BType);
+            }
+        }
         private void 新增ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            new AddBookInfo(this).Show();
+            AddBookInfo AddFrom = new AddBookInfo();
+            AddFrom.Owner = this;
+            AddFrom.ShowDialog();
         }
 
         private void 编辑ToolStripMenuItem_Click(object sender, EventArgs e)
@@ -50,7 +64,10 @@ namespace BookManager.module.Manager.BookManage
                 return;
             }
             String ID = dataGridView1.SelectedRows[0].Cells["ID"].Value.ToString();
-            new EditBookInfo(ID,this).Show();
+            EditBookInfo EditForm = new EditBookInfo();
+            EditForm.Owner = this;
+            EditForm.EditID = ID;
+            EditForm.ShowDialog();
         }
 
         private void 删除ToolStripMenuItem_Click(object sender, EventArgs e)
@@ -71,12 +88,24 @@ namespace BookManager.module.Manager.BookManage
         private void DisplayBook_Load(object sender, EventArgs e)
         {
             showBookInfo();
+            TypeList();
         }
 
         private void searchBtn_Click(object sender, EventArgs e)
         {
             string searchKey = tbsearch.Text;
-            searchInfo(searchKey);
+            string typeKey = cbSearchType.Text;
+            searchInfo(searchKey,typeKey);
+        }
+
+        private void 书籍类别管理ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new DisplayBookType().Show();
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
     }

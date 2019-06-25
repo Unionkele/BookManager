@@ -16,17 +16,12 @@ namespace BookManager.module.Manager.BookManage
 {
     public partial class EditBookInfo : Form
     {
-        private DisplayBook displayBook;
-        private string EditID;
-        public EditBookInfo(string ID, DisplayBook displayBook)
-        {          
-            this.EditID=ID;
-            this.displayBook = displayBook;
-        }
+        public string EditID;
         public EditBookInfo()
         {
             InitializeComponent();
         }
+        //初始数据获取
         private void showEditInfo()
         {
             BookInfo editInfo = new BookInfo();
@@ -41,7 +36,7 @@ namespace BookManager.module.Manager.BookManage
             editBookType.Text = editInfo.BookType;
             editBookRemark.Text = editInfo.BookRemark;
         }
-
+        //更新信息
         private void updataInfo()
         {
             if (editBookName.Text != "" && editBookWriter.Text != "" && editBookNum.Text != "")
@@ -63,7 +58,8 @@ namespace BookManager.module.Manager.BookManage
                 }
                 else
                 {
-                    displayBook.showBookInfo();
+                    DisplayBook display = (DisplayBook)this.Owner;
+                    display.showBookInfo();
                     MessageBox.Show("更新成功", "提示信息");                
                 }
             }
@@ -95,9 +91,16 @@ namespace BookManager.module.Manager.BookManage
                 }
             }
         }
-
-       
-
+        //加载下拉框列表
+        private void TypeList()
+        {
+            PageList<BookType> typelist = ORMSupport.PageSelect<BookType>()
+                .Select();
+            foreach (BookType item in typelist.Rows)
+            {
+                editBookType.Items.Add(item.BType);
+            }
+        }
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -106,6 +109,7 @@ namespace BookManager.module.Manager.BookManage
         private void EditBookInfo_Load(object sender, EventArgs e)
         {
             showEditInfo();
+            TypeList();
         }
 
         private void btnEdit_Click(object sender, EventArgs e)

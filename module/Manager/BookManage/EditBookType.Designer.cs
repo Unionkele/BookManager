@@ -40,6 +40,7 @@
             // lbTypeInfo
             // 
             this.lbTypeInfo.AutoSize = true;
+            this.lbTypeInfo.ForeColor = System.Drawing.Color.Red;
             this.lbTypeInfo.Location = new System.Drawing.Point(70, 58);
             this.lbTypeInfo.Name = "lbTypeInfo";
             this.lbTypeInfo.Size = new System.Drawing.Size(0, 12);
@@ -111,6 +112,7 @@
             this.Controls.Add(this.btnUpdata);
             this.Name = "EditBookType";
             this.Text = "类型编辑";
+            this.Load += new System.EventHandler(this.EditBookType_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

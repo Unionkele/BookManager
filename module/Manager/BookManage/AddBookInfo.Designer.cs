@@ -265,6 +265,7 @@
             this.Controls.Add(this.label1);
             this.Name = "AddBookInfo";
             this.Text = "书籍信息添加";
+            this.Load += new System.EventHandler(this.AddBookInfo_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
