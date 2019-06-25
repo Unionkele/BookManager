@@ -88,6 +88,7 @@
             this.btnClose.TabIndex = 3;
             this.btnClose.Text = "关闭";
             this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // lbTypeInfo
             // 
@@ -110,7 +111,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnType);
             this.Name = "AddBookType";
-            this.Text = "AddBookType";
+            this.Text = "类型添加";
             this.ResumeLayout(false);
             this.PerformLayout();
 

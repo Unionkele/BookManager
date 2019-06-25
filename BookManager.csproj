@@ -87,11 +87,23 @@
     <Compile Include="module\Manager\BookManage\DisplayBook.Designer.cs">
       <DependentUpon>DisplayBook.cs</DependentUpon>
     </Compile>
+    <Compile Include="module\Manager\BookManage\DisplayBookType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="module\Manager\BookManage\DisplayBookType.Designer.cs">
+      <DependentUpon>DisplayBookType.cs</DependentUpon>
+    </Compile>
     <Compile Include="module\Manager\BookManage\EditBookInfo.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="module\Manager\BookManage\EditBookInfo.Designer.cs">
       <DependentUpon>EditBookInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="module\Manager\BookManage\EditBookType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="module\Manager\BookManage\EditBookType.Designer.cs">
+      <DependentUpon>EditBookType.cs</DependentUpon>
     </Compile>
     <Compile Include="module\Manager\PersonManage\addpenson.cs">
       <SubType>Form</SubType>
@@ -113,12 +125,6 @@
     </Compile>
     <Compile Include="module\Manager\PersonManage\EditPerson.Designer.cs">
       <DependentUpon>EditPerson.cs</DependentUpon>
-    </Compile>
-    <Compile Include="module\book\BookInfo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="module\book\BookInfo.Designer.cs">
-      <DependentUpon>BookInfo.cs</DependentUpon>
     </Compile>
     <Compile Include="module\Login\LoginForm.cs">
       <SubType>Form</SubType>
@@ -143,9 +149,6 @@
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="module\book\BookInfo.resx">
-      <DependentUpon>BookInfo.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="module\Login\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -161,8 +164,14 @@
     <EmbeddedResource Include="module\Manager\BookManage\DisplayBook.resx">
       <DependentUpon>DisplayBook.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="module\Manager\BookManage\DisplayBookType.resx">
+      <DependentUpon>DisplayBookType.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="module\Manager\BookManage\EditBookInfo.resx">
       <DependentUpon>EditBookInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="module\Manager\BookManage\EditBookType.resx">
+      <DependentUpon>EditBookType.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="module\Manager\PersonManage\addpenson.resx">
       <DependentUpon>addpenson.cs</DependentUpon>
@@ -195,7 +204,9 @@
   <ItemGroup>
     <Content Include="extre\NetDBLibrary.dll" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="module\book\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
