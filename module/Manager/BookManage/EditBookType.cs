@@ -16,16 +16,10 @@ namespace BookManager.module.Manager.BookManage
 {
     public partial class EditBookType : Form
     {
-        private string EditID;
-        private DisplayBookType displayType;
+        public string EditID;
         public EditBookType()
         {
             InitializeComponent();
-        }
-        public EditBookType(string ID, DisplayBookType displayType)
-        {
-            this.EditID = ID;
-            this.displayType = displayType;
         }
         private void editList()
         {
@@ -51,8 +45,9 @@ namespace BookManager.module.Manager.BookManage
                 }
                 else
                 {
-                    displayType.showTypeInfo();
-                    MessageBox.Show("更新成功", "提示信息");
+                    DisplayBookType display = (DisplayBookType)this.Owner;
+                    display.showTypeInfo();
+                    MessageBox.Show("更新成功", "提示信息");                   
                 }
             }
             else
@@ -64,6 +59,11 @@ namespace BookManager.module.Manager.BookManage
         private void btnUpdata_Click(object sender, EventArgs e)
         {
             subEdit();
+        }
+
+        private void EditBookType_Load(object sender, EventArgs e)
+        {
+            editList();
         }
     }
 }
