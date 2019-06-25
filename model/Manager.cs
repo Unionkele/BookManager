@@ -29,28 +29,34 @@ namespace BookManager.model
             set { _ManagerCode = value; }
         }
         //权限等级（超级管理员）
-        private string _Manage;
-        [Colmun(Type = "varchar(4)")]
-        public string Manage
+        private bool _Manage;
+        [Colmun(Type = "bit")]
+        public bool Manage
         {
             get { return _Manage; }
             set { _Manage = value; }
         }
+
+
         //权限等级（工作人员）
-        private string _Work;
-        [Colmun(Type = "varchar(4)")]
-        public string Work
+        private bool _Work;
+        [Colmun(Type = "bit")]
+        public bool Work
         {
             get { return _Work; }
             set { _Work = value; }
         }
+
+
         //权限等级（游客）
-        private string _Query;
-        [Colmun(Type = "varchar(4)")]
-        public string Query
+        private bool _Query;
+        [Colmun(Type = "bit")]
+        public bool Query
         {
             get { return _Query; }
             set { _Query = value; }
         }
+
+
     }
 }
