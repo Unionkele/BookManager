@@ -16,11 +16,16 @@ namespace BookManager.module.Manager.BookManage
 {
     public partial class EditBookInfo : Form
     {
+        private DisplayBook displayBook;
         private string EditID;
-        public EditBookInfo(string ID)
+        public EditBookInfo(string ID, DisplayBook displayBook)
+        {          
+            this.EditID=ID;
+            this.displayBook = displayBook;
+        }
+        public EditBookInfo()
         {
             InitializeComponent();
-            this.EditID=ID;
         }
         private void showEditInfo()
         {
@@ -58,6 +63,7 @@ namespace BookManager.module.Manager.BookManage
                 }
                 else
                 {
+                    displayBook.showBookInfo();
                     MessageBox.Show("更新成功", "提示信息");                
                 }
             }

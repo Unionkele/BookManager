@@ -19,9 +19,13 @@ namespace BookManager.module.Manager.BookManage
         private DisplayBook displayBook;
 
         public AddBookInfo(DisplayBook displayBook)
-        {
-            InitializeComponent();
+        {          
             this.displayBook = displayBook;
+        }
+
+        public AddBookInfo()
+        {
+            InitializeComponent();         
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -37,6 +41,7 @@ namespace BookManager.module.Manager.BookManage
         //信息添加
         private void addInfo()
         {
+            tbBookName.Focus();
             if (tbBookName.Text != "" && tbBookWriter.Text != "" && tbBookNum.Text != "")
             {
                 BookInfo Binfo = new BookInfo();
@@ -91,12 +96,12 @@ namespace BookManager.module.Manager.BookManage
         //清除输入框
         private void clearBox()
         {
-            tbBookName.Text="";
-            tbBookWriter.Text="";
-            tbBookPublish.Text="";
+            tbBookName.Clear();
+            tbBookWriter.Clear();
+            tbBookPublish.Clear();
             tbBookPrice.Text="0";
-            tbBookNum.Text="";
-            tbBookRemark.Text="";
+            tbBookNum.Clear();
+            tbBookRemark.Clear();
         }
         
     }

@@ -15,37 +15,59 @@ namespace BookManager.module.Manager.BookManage
 {
     public partial class AddBookType : Form
     {
+        private DisplayBookType displayType;
         public AddBookType()
         {
             InitializeComponent();
         }
-        private void AddType()
+        public AddBookType(DisplayBookType displayType)
         {
-
+            this.displayType = displayType;
         }
-
-        private void btnType_Click(object sender, EventArgs e)
+        private void AddType()
         {
             if (tbBookType.Text != "")
             {
                 BookType typeInfo = new BookType();
                 typeInfo.BType = tbBookType.Text;
-                typeInfo.BRemark = tbBookRemark.Text;
-                int res = typeInfo.Save();
-                if (res == 0)
+                bool sel = typeInfo.Find();
+                if (sel)
                 {
-                    MessageBox.Show("添加失败", "提示信息");
+                    lbTypeInfo.Text = "该类别已存在";
+                    tbBookType.Clear();
                 }
                 else
                 {
-                    MessageBox.Show("添加成功", "提示信息");
+                    lbTypeInfo.Visible = false;
+                    typeInfo.BType = tbBookType.Text;
+                    typeInfo.BRemark = tbBookRemark.Text;
+                    int res = typeInfo.Save();
+                    if (res == 0)
+                    {
+                        MessageBox.Show("添加失败", "提示信息");
+                    }
+                    else
+                    {
+                        displayType.showTypeInfo();
+                        MessageBox.Show("添加成功", "提示信息");
+                    }
                 }
             }
             else
             {
                 lbTypeInfo.Text = "请输入类别";
             }
+        }
 
+        private void btnType_Click(object sender, EventArgs e)
+        {
+
+            AddType();
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

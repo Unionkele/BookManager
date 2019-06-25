@@ -14,34 +14,24 @@ using BookManager.model;
 
 namespace BookManager.module.Manager.BookManage
 {
-    public partial class DisplayBook : Form
+    public partial class DisplayBookType : Form
     {
-        public DisplayBook()
+        public DisplayBookType()
         {
             InitializeComponent();
         }
-        //书籍信息列表显示
-        public void showBookInfo()
+
+        public void showTypeInfo()
         {
-            PageList<BookInfo> bookList = ORMSupport.PageSelect<BookInfo>()
-                .Select();
-            dataGridView1.DataSource = bookList.Rows;
-        }
-        //显示搜索结果(通过书籍名称或作者姓名查询)s
-        private void searchInfo(string key)
-        {
-            PageList<BookInfo> searchInfo = new PageList<BookInfo>()
-            .AddWhere("BookName", "like", "%" + key + "%")
-            .AddWhere("BookWriter", "like", "$" + key + "%")
-            .Select();
-            dataGridView1.DataSource = searchInfo.Rows;
+            PageList<BookType> typeList = new PageList<BookType>().Select();
+            dataGridView1.DataSource = typeList.Rows;
         }
         private void 新增ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            new AddBookInfo(this).Show();
+            new AddBookType(this).Show();
         }
 
-        private void 编辑ToolStripMenuItem_Click(object sender, EventArgs e)
+        private void 修改ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             int count = dataGridView1.SelectedRows.Count;
             if (count == 0)
@@ -50,7 +40,7 @@ namespace BookManager.module.Manager.BookManage
                 return;
             }
             String ID = dataGridView1.SelectedRows[0].Cells["ID"].Value.ToString();
-            new EditBookInfo(ID,this).Show();
+            new EditBookType(ID, this).Show();
         }
 
         private void 删除ToolStripMenuItem_Click(object sender, EventArgs e)
@@ -62,22 +52,10 @@ namespace BookManager.module.Manager.BookManage
                 return;
             }
             String ID = dataGridView1.SelectedRows[0].Cells["ID"].Value.ToString();
-            BookInfo delInfo = new BookInfo();
+            BookType delInfo = new BookType();
             delInfo.ID = ID;
             MessageBox.Show(delInfo.Delete() == 1 ? "删除成功！" : "删除失败！");
-            showBookInfo();
+            showTypeInfo();
         }
-
-        private void DisplayBook_Load(object sender, EventArgs e)
-        {
-            showBookInfo();
-        }
-
-        private void searchBtn_Click(object sender, EventArgs e)
-        {
-            string searchKey = tbsearch.Text;
-            searchInfo(searchKey);
-        }
-
     }
 }
