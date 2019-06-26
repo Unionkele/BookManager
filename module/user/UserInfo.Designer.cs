@@ -118,7 +118,7 @@
             // 
             this.button_s.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.button_s.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.button_s.Location = new System.Drawing.Point(537, 35);
+            this.button_s.Location = new System.Drawing.Point(627, 104);
             this.button_s.Margin = new System.Windows.Forms.Padding(4);
             this.button_s.Name = "button_s";
             this.button_s.Size = new System.Drawing.Size(100, 44);
@@ -131,7 +131,7 @@
             // 
             this.button_c.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.button_c.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.button_c.Location = new System.Drawing.Point(537, 138);
+            this.button_c.Location = new System.Drawing.Point(846, 104);
             this.button_c.Margin = new System.Windows.Forms.Padding(4);
             this.button_c.Name = "button_c";
             this.button_c.Size = new System.Drawing.Size(100, 44);
@@ -152,7 +152,7 @@
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(573, 362);
+            this.groupBox1.Size = new System.Drawing.Size(997, 362);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "查询结果";
@@ -163,7 +163,7 @@
             this.textBox_money.Margin = new System.Windows.Forms.Padding(4);
             this.textBox_money.Name = "textBox_money";
             this.textBox_money.ReadOnly = true;
-            this.textBox_money.Size = new System.Drawing.Size(132, 34);
+            this.textBox_money.Size = new System.Drawing.Size(250, 34);
             this.textBox_money.TabIndex = 3;
             // 
             // dataGridView_books
@@ -183,7 +183,7 @@
             this.dataGridView_books.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView_books.Name = "dataGridView_books";
             this.dataGridView_books.RowTemplate.Height = 23;
-            this.dataGridView_books.Size = new System.Drawing.Size(523, 235);
+            this.dataGridView_books.Size = new System.Drawing.Size(938, 235);
             this.dataGridView_books.TabIndex = 2;
             // 
             // label5
@@ -213,30 +213,37 @@
             this.ID.DataPropertyName = "ID";
             this.ID.HeaderText = "ID";
             this.ID.Name = "ID";
+            this.ID.Visible = false;
+            this.ID.Width = 50;
             // 
             // BookName
             // 
             this.BookName.DataPropertyName = "BookName";
             this.BookName.HeaderText = "书籍名称";
             this.BookName.Name = "BookName";
+            this.BookName.Width = 200;
             // 
             // BookWriter
             // 
             this.BookWriter.DataPropertyName = "BookWriter";
             this.BookWriter.HeaderText = "书籍作者";
             this.BookWriter.Name = "BookWriter";
+            this.BookWriter.Width = 150;
             // 
             // BookPublish
             // 
             this.BookPublish.DataPropertyName = "BookPublish";
             this.BookPublish.HeaderText = "书籍出版社";
             this.BookPublish.Name = "BookPublish";
+            this.BookPublish.Width = 200;
             // 
             // BookDate
             // 
             this.BookDate.DataPropertyName = "BookDate";
             this.BookDate.HeaderText = "书籍出版时间";
             this.BookDate.Name = "BookDate";
+            this.BookDate.Visible = false;
+            this.BookDate.Width = 200;
             // 
             // BookPrice
             // 
@@ -249,6 +256,7 @@
             this.BookNum.DataPropertyName = "BookNum";
             this.BookNum.HeaderText = "书籍数量";
             this.BookNum.Name = "BookNum";
+            this.BookNum.Visible = false;
             // 
             // BookType
             // 
@@ -261,12 +269,13 @@
             this.BookRemark.DataPropertyName = "BookRemark";
             this.BookRemark.HeaderText = "书籍备注";
             this.BookRemark.Name = "BookRemark";
+            this.BookRemark.Width = 130;
             // 
             // UserInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(712, 618);
+            this.ClientSize = new System.Drawing.Size(1129, 618);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button_c);
             this.Controls.Add(this.button_s);
