@@ -48,6 +48,7 @@
             this.searchBtn = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.cbSearchType = new System.Windows.Forms.ComboBox();
+            this.书籍借阅记录ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -142,7 +143,8 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.操作ToolStripMenuItem,
-            this.书籍类别管理ToolStripMenuItem});
+            this.书籍类别管理ToolStripMenuItem,
+            this.书籍借阅记录ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(809, 25);
@@ -210,7 +212,7 @@
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(75, 23);
             this.btnClose.TabIndex = 5;
-            this.btnClose.Text = "关闭";
+            this.btnClose.Text = "退出";
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
@@ -221,6 +223,12 @@
             this.cbSearchType.Name = "cbSearchType";
             this.cbSearchType.Size = new System.Drawing.Size(121, 20);
             this.cbSearchType.TabIndex = 6;
+            // 
+            // 书籍借阅记录ToolStripMenuItem
+            // 
+            this.书籍借阅记录ToolStripMenuItem.Name = "书籍借阅记录ToolStripMenuItem";
+            this.书籍借阅记录ToolStripMenuItem.Size = new System.Drawing.Size(92, 21);
+            this.书籍借阅记录ToolStripMenuItem.Text = "书籍借阅记录";
             // 
             // DisplayBook
             // 
@@ -267,5 +275,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.ComboBox cbSearchType;
+        private System.Windows.Forms.ToolStripMenuItem 书籍借阅记录ToolStripMenuItem;
     }
 }
