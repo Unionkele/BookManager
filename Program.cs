@@ -7,6 +7,7 @@ using System.Windows.Forms;
 using NetDB.Core;
 using BookManager.model;
 using BookManager.module.Login;
+using BookManager.module.user;
 using BookManager.module.Manager.BookManage;
 using BookManager.module.Manager.PersonManager;
 
