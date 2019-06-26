@@ -117,12 +117,6 @@
     <Compile Include="module\Login\LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="module\Manager\PersonManage\EditPerson.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="module\Manager\PersonManage\EditPerson.Designer.cs">
-      <DependentUpon>EditPerson.cs</DependentUpon>
-    </Compile>
     <Compile Include="module\user\UserInfo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -160,9 +154,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="module\Manager\PersonManage\DisplayPerson.resx">
       <DependentUpon>DisplayPerson.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="module\Manager\PersonManage\EditPerson.resx">
-      <DependentUpon>EditPerson.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="module\user\UserInfo.resx">
       <DependentUpon>UserInfo.cs</DependentUpon>
