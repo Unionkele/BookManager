@@ -16,7 +16,7 @@ namespace BookManager.module.user
         {
             InitializeComponent();
         }
-        string strname, strphone, strnum;
+
         private void button1_Click(object sender, EventArgs e)
         {
             if (textBox_name.Text != "") 

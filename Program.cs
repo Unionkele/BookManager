@@ -21,9 +21,10 @@ namespace BookManager
         static void Main()
         {
             createTb();
+            //createAdmin();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new DisplayBook());
+            Application.Run(new DisplayPerson());
 
 
 
@@ -38,5 +39,12 @@ namespace BookManager
             new Manager().CreateTable();
             new Person().CreateTable();
         }
+        //static void createAdmin()
+        //{
+        //    Manager mAdmin = new Manager();
+        //    mAdmin.ManagerName = "admin";
+        //    mAdmin.ManagerCode = "123456";
+        //    mAdmin.Save();
+        //}
     }
 }

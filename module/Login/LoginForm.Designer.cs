@@ -30,12 +30,12 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.tbLoginName = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.tbLoginPwd = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.cbLoginer = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.tbLoginPwd = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.tbLoginName = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.subLogin = new System.Windows.Forms.Button();
             this.res = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
@@ -65,47 +65,6 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(49, 35);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(41, 12);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "用户名";
-            // 
-            // tbLoginName
-            // 
-            this.tbLoginName.Location = new System.Drawing.Point(110, 32);
-            this.tbLoginName.Name = "tbLoginName";
-            this.tbLoginName.Size = new System.Drawing.Size(121, 21);
-            this.tbLoginName.TabIndex = 1;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(61, 72);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(29, 12);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "密码";
-            // 
-            // tbLoginPwd
-            // 
-            this.tbLoginPwd.Location = new System.Drawing.Point(110, 69);
-            this.tbLoginPwd.Name = "tbLoginPwd";
-            this.tbLoginPwd.Size = new System.Drawing.Size(121, 21);
-            this.tbLoginPwd.TabIndex = 1;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(49, 106);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(41, 12);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "登录者";
-            // 
             // cbLoginer
             // 
             this.cbLoginer.FormattingEnabled = true;
@@ -116,6 +75,48 @@
             this.cbLoginer.Name = "cbLoginer";
             this.cbLoginer.Size = new System.Drawing.Size(121, 20);
             this.cbLoginer.TabIndex = 3;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(49, 106);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(41, 12);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "登录者";
+            // 
+            // tbLoginPwd
+            // 
+            this.tbLoginPwd.Location = new System.Drawing.Point(110, 69);
+            this.tbLoginPwd.Name = "tbLoginPwd";
+            this.tbLoginPwd.PasswordChar = '*';
+            this.tbLoginPwd.Size = new System.Drawing.Size(121, 21);
+            this.tbLoginPwd.TabIndex = 1;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(61, 72);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(29, 12);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "密码";
+            // 
+            // tbLoginName
+            // 
+            this.tbLoginName.Location = new System.Drawing.Point(110, 32);
+            this.tbLoginName.Name = "tbLoginName";
+            this.tbLoginName.Size = new System.Drawing.Size(121, 21);
+            this.tbLoginName.TabIndex = 1;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(49, 35);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(41, 12);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "用户名";
             // 
             // subLogin
             // 
@@ -135,6 +136,7 @@
             this.res.TabIndex = 3;
             this.res.Text = "注册";
             this.res.UseVisualStyleBackColor = true;
+            this.res.Click += new System.EventHandler(this.res_Click);
             // 
             // LoginForm
             // 

@@ -11,38 +11,29 @@ using System.Windows.Forms;
 using NetDB.Core;
 using NetDB.Core.Support;
 using BookManager.model;
-
-
-
+using BookManager.module.Manager.PersonManage;
 
 namespace BookManager.module.Manager.PersonManager
 {
     public partial class DisplayPerson : Form
     {
-        public DisplayPerson(string ID)
+        public DisplayPerson()
         {
             InitializeComponent();
         }
-
-        public DisplayPerson()
-        {
-            // TODO: Complete member initialization
-        }
-
-        private void DisplayPerson_Load(object sender, EventArgs e)
-        {
-            person();
-        }
-        public void person()
+        //加载初始信息
+        public void ShowPersonInfo()
         {
             PageList<Person> page = ORMSupport.PageSelect<Person>()
                 .Select();
             dataGridView1.DataSource = page.Rows;
         }
-
-        private void button1_Click(object sender, EventArgs e)
+        private void DisplayPerson_Load(object sender, EventArgs e)
         {
-            //deteperson win = new deteperson(); win.Show();
+            ShowPersonInfo();
+        }
+        private void 删除ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
             int count = dataGridView1.SelectedRows.Count;
             if (count == 0)
             {
@@ -50,41 +41,32 @@ namespace BookManager.module.Manager.PersonManager
                 return;
             }
             String ID = dataGridView1.SelectedRows[0].Cells["ID"].Value.ToString();
-            //new  Person (ID).Show();
-            
-           
+            Person delInfo = new Person();
+            delInfo.ID = ID;
+            MessageBox.Show(delInfo.Delete() == 1 ? "删除成功！" : "删除失败！");
+            ShowPersonInfo();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void 新增ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //deteperson win = new deteperson(); win.Show();
-            string ID = dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells["ID"].Value.ToString();
-             Person info = new Person();
-            info.ID = ID;
-            info.Delete();
-            PageList<Person> page = ORMSupport.PageSelect<Person>()
-                .Select();
-            dataGridView1.DataSource = page.Rows;
-
+            AddPersonInfo AddForm = new AddPersonInfo();
+            AddForm.Owner = this;
+            AddForm.ShowDialog();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void 编辑ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //selectperson win = new selectperson(); win.Show();
-            PageList<Person> page = ORMSupport.PageSelect<Person>()
-                .AddWhere("PersonName", textBox1.Text)
-                .Select();
-            dataGridView1.DataSource = page.Rows;
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
+            int count = dataGridView1.SelectedRows.Count;
+            if (count == 0)
+            {
+                MessageBox.Show("未选中行！");
+                return;
+            }
+            String ID = dataGridView1.SelectedRows[0].Cells["ID"].Value.ToString();
+            EditPersonInfo EditForm = new EditPersonInfo();
+            EditForm.Owner = this;
+            EditForm.EditID = ID;
+            EditForm.ShowDialog();
         }
     }
 }

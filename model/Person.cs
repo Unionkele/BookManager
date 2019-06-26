@@ -14,7 +14,7 @@ namespace BookManager.model
     {
         //用户姓名
         private string _PersonName;
-        [Colmun(Type = "varchar(50)", IsNull = false)]
+        [Colmun(Type = "varchar(50)")]
         public string PersonName
         {
             get { return _PersonName; }
@@ -22,7 +22,7 @@ namespace BookManager.model
         }
         //用户性别
         private string _PersonSex;
-        [Colmun(Type = "varchar(4)", IsNull = false)]
+        [Colmun(Type = "varchar(4)")]
         public string PersonSex
         {
             get { return _PersonSex; }
@@ -30,7 +30,7 @@ namespace BookManager.model
         }
         //用户电话
         private string _PersonPhone;
-        [Colmun(Type = "varchar(50)", IsNull = false)]
+        [Colmun(Type = "varchar(50)")]
         public string PersonPhone
         {
             get { return _PersonPhone; }
@@ -54,7 +54,7 @@ namespace BookManager.model
         }
         //余额
         private float _PersonMoney;
-        [Colmun(Type = "float", IsNull = false)]
+        [Colmun(Type = "float")]
         public float PersonMoney
         {
             get { return _PersonMoney; }
@@ -62,7 +62,7 @@ namespace BookManager.model
         }
         //用户类别
         private string _PersonIdentity;
-        [Colmun(Type = "varchar(50)", IsNull = false)]
+        [Colmun(Type = "varchar(50)")]
         public string PersonIdentity
         {
             get { return _PersonIdentity; }

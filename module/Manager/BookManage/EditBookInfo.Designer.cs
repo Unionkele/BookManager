@@ -226,7 +226,6 @@
             this.editBookName.Name = "editBookName";
             this.editBookName.Size = new System.Drawing.Size(180, 21);
             this.editBookName.TabIndex = 22;
-            this.editBookName.TextChanged += new System.EventHandler(this.editBookName_TextChanged);
             // 
             // label1
             // 
