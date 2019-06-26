@@ -16,5 +16,20 @@ namespace BookManager.module.Login
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (textBox1.Text != "" && textBox2.Text != "")
+            {
+                string username = textBox1.Text;
+                string password = textBox2.Text;
+                string seek = "select count(*) from Person where PersonName=@username";
+            }
+            else {
+                MessageBox.Show("不能为空","提示");
+            }
+         
+
+        }
     }
 }
