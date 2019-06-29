@@ -35,7 +35,11 @@
             this.新增ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.编辑ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.删除ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.用户类型管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cbIdentity = new System.Windows.Forms.ComboBox();
+            this.InfoSearch = new System.Windows.Forms.Button();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PersonCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.用户名 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.性别 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.电话 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,9 +47,6 @@
             this.余额 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.类别 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.备注 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cbIdentity = new System.Windows.Forms.ComboBox();
-            this.InfoSearch = new System.Windows.Forms.Button();
-            this.用户类型管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -56,6 +57,7 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
+            this.PersonCode,
             this.用户名,
             this.性别,
             this.电话,
@@ -120,12 +122,44 @@
             this.删除ToolStripMenuItem.Text = "删除";
             this.删除ToolStripMenuItem.Click += new System.EventHandler(this.删除ToolStripMenuItem_Click);
             // 
+            // 用户类型管理ToolStripMenuItem
+            // 
+            this.用户类型管理ToolStripMenuItem.Name = "用户类型管理ToolStripMenuItem";
+            this.用户类型管理ToolStripMenuItem.Size = new System.Drawing.Size(92, 21);
+            this.用户类型管理ToolStripMenuItem.Text = "用户类型管理";
+            this.用户类型管理ToolStripMenuItem.Click += new System.EventHandler(this.用户类型管理ToolStripMenuItem_Click);
+            // 
+            // cbIdentity
+            // 
+            this.cbIdentity.FormattingEnabled = true;
+            this.cbIdentity.Location = new System.Drawing.Point(302, 33);
+            this.cbIdentity.Name = "cbIdentity";
+            this.cbIdentity.Size = new System.Drawing.Size(121, 20);
+            this.cbIdentity.TabIndex = 5;
+            // 
+            // InfoSearch
+            // 
+            this.InfoSearch.Location = new System.Drawing.Point(604, 31);
+            this.InfoSearch.Name = "InfoSearch";
+            this.InfoSearch.Size = new System.Drawing.Size(75, 23);
+            this.InfoSearch.TabIndex = 6;
+            this.InfoSearch.Text = "查询";
+            this.InfoSearch.UseVisualStyleBackColor = true;
+            this.InfoSearch.Click += new System.EventHandler(this.InfoSearch_Click);
+            // 
             // ID
             // 
             this.ID.DataPropertyName = "ID";
             this.ID.HeaderText = "ID";
             this.ID.Name = "ID";
             this.ID.Visible = false;
+            // 
+            // PersonCode
+            // 
+            this.PersonCode.DataPropertyName = "PersonCode";
+            this.PersonCode.HeaderText = "密码";
+            this.PersonCode.Name = "PersonCode";
+            this.PersonCode.Visible = false;
             // 
             // 用户名
             // 
@@ -169,31 +203,6 @@
             this.备注.HeaderText = "备注";
             this.备注.Name = "备注";
             // 
-            // cbIdentity
-            // 
-            this.cbIdentity.FormattingEnabled = true;
-            this.cbIdentity.Location = new System.Drawing.Point(302, 33);
-            this.cbIdentity.Name = "cbIdentity";
-            this.cbIdentity.Size = new System.Drawing.Size(121, 20);
-            this.cbIdentity.TabIndex = 5;
-            // 
-            // InfoSearch
-            // 
-            this.InfoSearch.Location = new System.Drawing.Point(604, 31);
-            this.InfoSearch.Name = "InfoSearch";
-            this.InfoSearch.Size = new System.Drawing.Size(75, 23);
-            this.InfoSearch.TabIndex = 6;
-            this.InfoSearch.Text = "查询";
-            this.InfoSearch.UseVisualStyleBackColor = true;
-            this.InfoSearch.Click += new System.EventHandler(this.InfoSearch_Click);
-            // 
-            // 用户类型管理ToolStripMenuItem
-            // 
-            this.用户类型管理ToolStripMenuItem.Name = "用户类型管理ToolStripMenuItem";
-            this.用户类型管理ToolStripMenuItem.Size = new System.Drawing.Size(92, 21);
-            this.用户类型管理ToolStripMenuItem.Text = "用户类型管理";
-            this.用户类型管理ToolStripMenuItem.Click += new System.EventHandler(this.用户类型管理ToolStripMenuItem_Click);
-            // 
             // DisplayPerson
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -226,7 +235,11 @@
         private System.Windows.Forms.ToolStripMenuItem 新增ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 编辑ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 删除ToolStripMenuItem;
+        private System.Windows.Forms.ComboBox cbIdentity;
+        private System.Windows.Forms.Button InfoSearch;
+        private System.Windows.Forms.ToolStripMenuItem 用户类型管理ToolStripMenuItem;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PersonCode;
         private System.Windows.Forms.DataGridViewTextBoxColumn 用户名;
         private System.Windows.Forms.DataGridViewTextBoxColumn 性别;
         private System.Windows.Forms.DataGridViewTextBoxColumn 电话;
@@ -234,8 +247,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn 余额;
         private System.Windows.Forms.DataGridViewTextBoxColumn 类别;
         private System.Windows.Forms.DataGridViewTextBoxColumn 备注;
-        private System.Windows.Forms.ComboBox cbIdentity;
-        private System.Windows.Forms.Button InfoSearch;
-        private System.Windows.Forms.ToolStripMenuItem 用户类型管理ToolStripMenuItem;
     }
 }

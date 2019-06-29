@@ -29,7 +29,19 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.操作ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.新增ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.编辑ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.删除ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.书籍类别管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.书籍借阅记录ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tbsearch = new System.Windows.Forms.TextBox();
+            this.searchBtn = new System.Windows.Forms.Button();
+            this.btnClose = new System.Windows.Forms.Button();
+            this.cbSearchType = new System.Windows.Forms.ComboBox();
             this.BookName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PersonCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BookWriter = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BookPublish = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BookDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -38,17 +50,6 @@
             this.BookType = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BookRemark = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.操作ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.新增ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.编辑ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.删除ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.书籍类别管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tbsearch = new System.Windows.Forms.TextBox();
-            this.searchBtn = new System.Windows.Forms.Button();
-            this.btnClose = new System.Windows.Forms.Button();
-            this.cbSearchType = new System.Windows.Forms.ComboBox();
-            this.书籍借阅记录ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -59,6 +60,7 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.BookName,
+            this.PersonCode,
             this.BookWriter,
             this.BookPublish,
             this.BookDate,
@@ -75,12 +77,111 @@
             this.dataGridView1.Size = new System.Drawing.Size(809, 394);
             this.dataGridView1.TabIndex = 1;
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.操作ToolStripMenuItem,
+            this.书籍类别管理ToolStripMenuItem,
+            this.书籍借阅记录ToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(809, 25);
+            this.menuStrip1.TabIndex = 2;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // 操作ToolStripMenuItem
+            // 
+            this.操作ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.新增ToolStripMenuItem,
+            this.编辑ToolStripMenuItem,
+            this.删除ToolStripMenuItem});
+            this.操作ToolStripMenuItem.Name = "操作ToolStripMenuItem";
+            this.操作ToolStripMenuItem.Size = new System.Drawing.Size(44, 21);
+            this.操作ToolStripMenuItem.Text = "操作";
+            // 
+            // 新增ToolStripMenuItem
+            // 
+            this.新增ToolStripMenuItem.Name = "新增ToolStripMenuItem";
+            this.新增ToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
+            this.新增ToolStripMenuItem.Text = "新增";
+            this.新增ToolStripMenuItem.Click += new System.EventHandler(this.新增ToolStripMenuItem_Click);
+            // 
+            // 编辑ToolStripMenuItem
+            // 
+            this.编辑ToolStripMenuItem.Name = "编辑ToolStripMenuItem";
+            this.编辑ToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
+            this.编辑ToolStripMenuItem.Text = "编辑";
+            this.编辑ToolStripMenuItem.Click += new System.EventHandler(this.编辑ToolStripMenuItem_Click);
+            // 
+            // 删除ToolStripMenuItem
+            // 
+            this.删除ToolStripMenuItem.Name = "删除ToolStripMenuItem";
+            this.删除ToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
+            this.删除ToolStripMenuItem.Text = "删除";
+            this.删除ToolStripMenuItem.Click += new System.EventHandler(this.删除ToolStripMenuItem_Click);
+            // 
+            // 书籍类别管理ToolStripMenuItem
+            // 
+            this.书籍类别管理ToolStripMenuItem.Name = "书籍类别管理ToolStripMenuItem";
+            this.书籍类别管理ToolStripMenuItem.Size = new System.Drawing.Size(92, 21);
+            this.书籍类别管理ToolStripMenuItem.Text = "书籍类型管理";
+            this.书籍类别管理ToolStripMenuItem.Click += new System.EventHandler(this.书籍类别管理ToolStripMenuItem_Click);
+            // 
+            // 书籍借阅记录ToolStripMenuItem
+            // 
+            this.书籍借阅记录ToolStripMenuItem.Name = "书籍借阅记录ToolStripMenuItem";
+            this.书籍借阅记录ToolStripMenuItem.Size = new System.Drawing.Size(92, 21);
+            this.书籍借阅记录ToolStripMenuItem.Text = "书籍借阅记录";
+            // 
+            // tbsearch
+            // 
+            this.tbsearch.Location = new System.Drawing.Point(480, 32);
+            this.tbsearch.Name = "tbsearch";
+            this.tbsearch.Size = new System.Drawing.Size(132, 21);
+            this.tbsearch.TabIndex = 3;
+            // 
+            // searchBtn
+            // 
+            this.searchBtn.Location = new System.Drawing.Point(618, 30);
+            this.searchBtn.Name = "searchBtn";
+            this.searchBtn.Size = new System.Drawing.Size(75, 23);
+            this.searchBtn.TabIndex = 4;
+            this.searchBtn.Text = "查询";
+            this.searchBtn.UseVisualStyleBackColor = true;
+            this.searchBtn.Click += new System.EventHandler(this.searchBtn_Click);
+            // 
+            // btnClose
+            // 
+            this.btnClose.Location = new System.Drawing.Point(712, 30);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(75, 23);
+            this.btnClose.TabIndex = 5;
+            this.btnClose.Text = "退出";
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // cbSearchType
+            // 
+            this.cbSearchType.FormattingEnabled = true;
+            this.cbSearchType.Location = new System.Drawing.Point(353, 33);
+            this.cbSearchType.Name = "cbSearchType";
+            this.cbSearchType.Size = new System.Drawing.Size(121, 20);
+            this.cbSearchType.TabIndex = 6;
+            // 
             // BookName
             // 
             this.BookName.DataPropertyName = "BookName";
             this.BookName.HeaderText = "书籍名称";
             this.BookName.Name = "BookName";
             this.BookName.ReadOnly = true;
+            // 
+            // PersonCode
+            // 
+            this.PersonCode.DataPropertyName = "PersonCode";
+            this.PersonCode.HeaderText = "密码";
+            this.PersonCode.Name = "PersonCode";
+            this.PersonCode.ReadOnly = true;
+            this.PersonCode.Visible = false;
             // 
             // BookWriter
             // 
@@ -139,97 +240,6 @@
             this.ID.ReadOnly = true;
             this.ID.Visible = false;
             // 
-            // menuStrip1
-            // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.操作ToolStripMenuItem,
-            this.书籍类别管理ToolStripMenuItem,
-            this.书籍借阅记录ToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(809, 25);
-            this.menuStrip1.TabIndex = 2;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // 操作ToolStripMenuItem
-            // 
-            this.操作ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.新增ToolStripMenuItem,
-            this.编辑ToolStripMenuItem,
-            this.删除ToolStripMenuItem});
-            this.操作ToolStripMenuItem.Name = "操作ToolStripMenuItem";
-            this.操作ToolStripMenuItem.Size = new System.Drawing.Size(44, 21);
-            this.操作ToolStripMenuItem.Text = "操作";
-            // 
-            // 新增ToolStripMenuItem
-            // 
-            this.新增ToolStripMenuItem.Name = "新增ToolStripMenuItem";
-            this.新增ToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
-            this.新增ToolStripMenuItem.Text = "新增";
-            this.新增ToolStripMenuItem.Click += new System.EventHandler(this.新增ToolStripMenuItem_Click);
-            // 
-            // 编辑ToolStripMenuItem
-            // 
-            this.编辑ToolStripMenuItem.Name = "编辑ToolStripMenuItem";
-            this.编辑ToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
-            this.编辑ToolStripMenuItem.Text = "编辑";
-            this.编辑ToolStripMenuItem.Click += new System.EventHandler(this.编辑ToolStripMenuItem_Click);
-            // 
-            // 删除ToolStripMenuItem
-            // 
-            this.删除ToolStripMenuItem.Name = "删除ToolStripMenuItem";
-            this.删除ToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
-            this.删除ToolStripMenuItem.Text = "删除";
-            this.删除ToolStripMenuItem.Click += new System.EventHandler(this.删除ToolStripMenuItem_Click);
-            // 
-            // 书籍类别管理ToolStripMenuItem
-            // 
-            this.书籍类别管理ToolStripMenuItem.Name = "书籍类别管理ToolStripMenuItem";
-            this.书籍类别管理ToolStripMenuItem.Size = new System.Drawing.Size(92, 21);
-            this.书籍类别管理ToolStripMenuItem.Text = "书籍类型管理";
-            this.书籍类别管理ToolStripMenuItem.Click += new System.EventHandler(this.书籍类别管理ToolStripMenuItem_Click);
-            // 
-            // tbsearch
-            // 
-            this.tbsearch.Location = new System.Drawing.Point(480, 32);
-            this.tbsearch.Name = "tbsearch";
-            this.tbsearch.Size = new System.Drawing.Size(132, 21);
-            this.tbsearch.TabIndex = 3;
-            // 
-            // searchBtn
-            // 
-            this.searchBtn.Location = new System.Drawing.Point(618, 30);
-            this.searchBtn.Name = "searchBtn";
-            this.searchBtn.Size = new System.Drawing.Size(75, 23);
-            this.searchBtn.TabIndex = 4;
-            this.searchBtn.Text = "查询";
-            this.searchBtn.UseVisualStyleBackColor = true;
-            this.searchBtn.Click += new System.EventHandler(this.searchBtn_Click);
-            // 
-            // btnClose
-            // 
-            this.btnClose.Location = new System.Drawing.Point(712, 30);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(75, 23);
-            this.btnClose.TabIndex = 5;
-            this.btnClose.Text = "退出";
-            this.btnClose.UseVisualStyleBackColor = true;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
-            // cbSearchType
-            // 
-            this.cbSearchType.FormattingEnabled = true;
-            this.cbSearchType.Location = new System.Drawing.Point(353, 33);
-            this.cbSearchType.Name = "cbSearchType";
-            this.cbSearchType.Size = new System.Drawing.Size(121, 20);
-            this.cbSearchType.TabIndex = 6;
-            // 
-            // 书籍借阅记录ToolStripMenuItem
-            // 
-            this.书籍借阅记录ToolStripMenuItem.Name = "书籍借阅记录ToolStripMenuItem";
-            this.书籍借阅记录ToolStripMenuItem.Size = new System.Drawing.Size(92, 21);
-            this.书籍借阅记录ToolStripMenuItem.Text = "书籍借阅记录";
-            // 
             // DisplayBook
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -264,7 +274,11 @@
         private System.Windows.Forms.ToolStripMenuItem 书籍类别管理ToolStripMenuItem;
         private System.Windows.Forms.TextBox tbsearch;
         private System.Windows.Forms.Button searchBtn;
+        private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.ComboBox cbSearchType;
+        private System.Windows.Forms.ToolStripMenuItem 书籍借阅记录ToolStripMenuItem;
         private System.Windows.Forms.DataGridViewTextBoxColumn BookName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PersonCode;
         private System.Windows.Forms.DataGridViewTextBoxColumn BookWriter;
         private System.Windows.Forms.DataGridViewTextBoxColumn BookPublish;
         private System.Windows.Forms.DataGridViewTextBoxColumn BookDate;
@@ -273,8 +287,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn BookType;
         private System.Windows.Forms.DataGridViewTextBoxColumn BookRemark;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
-        private System.Windows.Forms.Button btnClose;
-        private System.Windows.Forms.ComboBox cbSearchType;
-        private System.Windows.Forms.ToolStripMenuItem 书籍借阅记录ToolStripMenuItem;
     }
 }
