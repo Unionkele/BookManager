@@ -10,6 +10,8 @@ using BookManager.module.Login;
 using BookManager.module.user;
 using BookManager.module.Manager.BookManage;
 using BookManager.module.Manager.PersonManager;
+using NetDB.Core.Support;
+using System.Configuration;
 
 namespace BookManager
 {
@@ -18,17 +20,15 @@ namespace BookManager
         /// <summary>
         /// 应用程序的主入口点。
         /// </summary>
+        public static string CurrentUser;
         [STAThread]
         static void Main()
         {
             createTb();
-            //createAdmin();
+            createAdmin();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new UserInfo());
-
-
-
+            Application.Run(new MainForm());
         }
         static void createTb()
         {
@@ -40,12 +40,19 @@ namespace BookManager
             new Manager().CreateTable();
             new Person().CreateTable();
         }
-        //static void createAdmin()
-        //{
-        //    Manager mAdmin = new Manager();
-        //    mAdmin.ManagerName = "admin";
-        //    mAdmin.ManagerCode = "123456";
-        //    mAdmin.Save();
-        //}
+        static void createAdmin()
+        {
+            PageList<Manager> user = ORMSupport.PageSelect<Manager>()
+                .AddWhere("ManagerName", "admin")
+                .Select();
+            if (user.Rows.Count == 0)
+            {
+                Manager mAdmin = new Manager();
+                mAdmin.ManagerName = "admin";
+                mAdmin.ManagerCode = "123456";
+                mAdmin.Save();
+            }          
+        }
+               
     }
 }

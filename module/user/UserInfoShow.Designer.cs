@@ -1,6 +1,6 @@
 ﻿namespace BookManager.module.user
 {
-    partial class UserInfo
+    partial class UserInfoShow
     {
         /// <summary>
         /// Required designer variable.

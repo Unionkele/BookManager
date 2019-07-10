@@ -50,8 +50,18 @@ namespace BookManager.module.Manager.PersonManager
         }
         private void DisplayPerson_Load(object sender, EventArgs e)
         {
-            ShowPersonInfo();
-            loadIdentity();
+            if (Program.CurrentUser == null)
+            {
+                Login.LoginForm loginF = new Login.LoginForm();
+                loginF.Owner = this;
+                loginF.ShowDialog();
+            }
+            else
+            {
+                ShowPersonInfo();
+                loadIdentity();
+            }
+            
         }
         private void 删除ToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -99,5 +109,7 @@ namespace BookManager.module.Manager.PersonManager
         {
             new DisplayIdentitycs().Show();
         }
+
+        public bool CurrentUser { get; set; }
     }
 }

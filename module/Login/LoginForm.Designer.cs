@@ -148,6 +148,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
             this.Name = "LoginForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "登录界面";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

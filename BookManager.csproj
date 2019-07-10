@@ -35,6 +35,9 @@
     <StartupObject>BookManager.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="IrisSkin4">
+      <HintPath>extre\IrisSkin4.dll</HintPath>
+    </Reference>
     <Reference Include="NetDBLibrary, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>extre\NetDBLibrary.dll</HintPath>
@@ -147,11 +150,11 @@
     <Compile Include="module\Manager\PersonManage\EditPersonInfo.Designer.cs">
       <DependentUpon>EditPersonInfo.cs</DependentUpon>
     </Compile>
-    <Compile Include="module\user\UserInfo.cs">
+    <Compile Include="module\user\UserInfoShow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="module\user\UserInfo.Designer.cs">
-      <DependentUpon>UserInfo.cs</DependentUpon>
+    <Compile Include="module\user\UserInfoShow.Designer.cs">
+      <DependentUpon>UserInfoShow.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -200,8 +203,8 @@
     <EmbeddedResource Include="module\Manager\PersonManage\EditPersonInfo.resx">
       <DependentUpon>EditPersonInfo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="module\user\UserInfo.resx">
-      <DependentUpon>UserInfo.cs</DependentUpon>
+    <EmbeddedResource Include="module\user\UserInfoShow.resx">
+      <DependentUpon>UserInfoShow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
