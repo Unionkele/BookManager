@@ -25,7 +25,7 @@ namespace BookManager
             //createAdmin();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new DisplayPerson());
+            Application.Run(new UserInfo());
 
 
 
