@@ -7,23 +7,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using NetDB.Core;
 using BookManager.model;
 
 using NetDB.Core;
 using NetDB.Core.Support;
-using BookManager.model;
+
 
 namespace BookManager.module.user
 {
-    public partial class UserInfo : Form
+    public partial class UserInfoShow : Form
     {
-        public UserInfo()
+        public UserInfoShow()
         {
             InitializeComponent();
         }
 
-        string strname, sqlname, strphone, sqlphone, strnum, sqlnum, strsql = "";
+        string strname, strphone, strnum, strsql = "";
         string[] sqlcode = new string[4];
         private void button1_Click(object sender, EventArgs e)
         {

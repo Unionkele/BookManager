@@ -43,6 +43,7 @@ namespace BookManager.module.Login
                             if (b)
                             {
                                 MessageBox.Show("登录成功", "提示信息");
+                                Program.CurrentUser = tbLoginName.Text;
                                 this.Hide();
                                 new MainForm().Show();
                             }
